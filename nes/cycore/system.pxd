@@ -50,8 +50,8 @@ cdef class NES:
         NESMappedRAM memory
         InterruptListener interrupt_listener
 
-        # object controller1, controller2
-        # object screen
+        public object controller1, controller2
+        public object screen
 
         int screen_scale, sync_mode
         bint v_overscan, h_overscan

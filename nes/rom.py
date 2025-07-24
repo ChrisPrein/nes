@@ -144,7 +144,7 @@ class ROM:
                                 nametable_mirror_pattern=self.mirror_pattern,
                                 )
             else:
-                print("Mapper {} not currently supported in py_compatibility_mode".format(self.mapper_id))
+                ValueError("Mapper {} not currently supported in py_compatibility_mode".format(self.mapper_id))
 
         if self.mapper_id == 0:
             return NESCart0(prg_rom_data=self.prg_rom_data,
@@ -176,4 +176,4 @@ class ROM:
                             interrupt_listener=interrupt_listener
                            )
         else:
-            print("Mapper {} not currently supported".format(self.mapper_id))
+            ValueError("Mapper {} not currently supported".format(self.mapper_id))

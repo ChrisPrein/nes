@@ -53,8 +53,8 @@ cdef class NES:
         public object controller1, controller2
         public object screen
 
-        int screen_scale, sync_mode
-        bint v_overscan, h_overscan
+        public int screen_scale, sync_mode
+        public bint v_overscan, h_overscan
 
     cdef int step(self, int log_cpu)
     cpdef void run(self)
